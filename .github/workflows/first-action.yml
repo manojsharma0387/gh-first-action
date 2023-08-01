@@ -10,5 +10,7 @@ jobs:
           ref: main
       - name: Prinet Github Repository Name
         run: echo "${{ github.repository }}"
+      - name: list all files
+        run: ls
       - name: Print goodbye
         run: echo "Done - bye!"
