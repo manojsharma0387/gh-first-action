@@ -4,7 +4,11 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Prinet greeting
-        run: echo "Hellow world!"
+      - name: fetch code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+      - name: Prinet Github Repository Name
+        run: echo "${{ github.repository }}"
       - name: Print goodbye
         run: echo "Done - bye!"
